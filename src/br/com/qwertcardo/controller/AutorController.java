@@ -3,6 +3,7 @@ package br.com.qwertcardo.controller;
 import javax.persistence.EntityManager;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import br.com.qwertcardo.model.Autor;
 import br.com.qwertcardo.util.UtilJPA;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Controller
 public class AutorController {
 
@@ -24,5 +26,4 @@ public class AutorController {
 		
 		return autor;
 	}
-	
 }
