@@ -47,6 +47,7 @@ public class FilmeController {
 		EntityManager em = UtilJPA.getEntityManager();
 
 		Filme filme = em.find(Filme.class, id);
+				
 		em.close();
 
 		return filme;
